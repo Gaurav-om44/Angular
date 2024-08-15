@@ -1,0 +1,44 @@
+<!-- app.component.html -->
+
+<div class="weather-app">
+  <h1>Weather App</h1>
+  <div class="input-container">
+    <input type="text" placeholder="Enter city" [(ngModel)]="city">
+    <button (click)="fetchWeatherData(city)">Get Weather</button>
+  </div>
+
+<div *ngIf="weatherData">
+<div>
+  {{weatherData}}
+  <h2>{{ weatherData.location.city }}</h2>
+  <h3>Current Weather</h3>
+    <p>Temperature: {{ weatherData.current_observation.condition.temperature }}°F</p>
+    <p>Condition: {{ weatherData.current_observation.condition.text }}</p>
+    <p>Wind: {{ weatherData.current_observation.wind.speed }} mph, {{ weatherData.current_observation.wind.direction }}</p>
+    <p>Humidity: {{ weatherData.current_observation.atmosphere.humidity }}%</p>
+    <p>Pressure: {{ weatherData.current_observation.atmosphere.pressure }} mb</p>
+    <p>Visibility: {{ weatherData.current_observation.atmosphere.visibility }} miles</p>
+  </div>
+  
+  <div>
+    <h3>Next 5 Days Forecast</h3>
+    <div *ngFor="let forecast of weatherData.forecasts.slice(0, 5)">
+      <div>
+        <h4>{{ forecast.day }}</h4>
+        <p>Date: {{ forecast.date | date:'mediumDate' }}</p>
+        <p>High: {{ forecast.high }}°F, Low: {{ forecast.low }}°F</p>
+        <p>Forecast: {{ forecast.text }}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <h3>Astronomy</h3>
+    <p>Sunrise: {{ weatherData.current_observation.astronomy.sunrise }}</p>
+    <p>Sunset: {{ weatherData.current_observation.astronomy.sunset }}</p>
+  </div>
+</div>
+  <script>
+    console.log(weatherData);
+  </script>
+</div>

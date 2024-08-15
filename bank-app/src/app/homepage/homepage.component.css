@@ -1,0 +1,68 @@
+ /* Angular Material custom theme */
+ .mat-toolbar {
+    background: #673AB7; /* Deep Purple */
+    color: white;
+  }
+  
+  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #673AB7;
+  }
+  
+  .mat-accent .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #9C27B0; /* Purple */
+  }
+  
+  .mat-warn .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #F44336; /* Red */
+  }
+  
+  /* Button colors */
+  .mat-primary .mat-button {
+    background: #673AB7;
+    color: white;
+  }
+  
+  .mat-accent .mat-button {
+    background: #9C27B0;
+    color: white;
+  }
+  
+  .mat-warn .mat-button {
+    background: #F44336;
+    color: white;
+  }
+  
+  /* Card header colors */
+  .mat-card-header {
+    background: #673AB7;
+    color: white;
+  }
+  
+  /* Table header colors */
+  .mat-header-row {
+    background: #673AB7;
+    color: white;
+  }
+  
+  /* Datepicker colors */
+  .mat-calendar {
+    color: #673AB7;
+  }
+  
+  .mat-calendar .mat-calendar-period-button {
+    color: #673AB7;
+  }
+  
+  .mat-calendar .mat-calendar-previous-button,
+  .mat-calendar .mat-calendar-next-button {
+    color: #673AB7;
+  }
+  
+  /* Input field focus color */
+  .mat-form-field-underline .mat-focused {
+    color: #673AB7;
+  }
+  .mat-form-field-underline .mat-form-field-ripple {
+    background-color: #673AB7;
+  }
+  

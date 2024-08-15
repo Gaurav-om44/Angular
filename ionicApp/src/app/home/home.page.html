@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Gift Shop
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <ion-row>
+
+
+    <ion-col *ngFor="let data of allitems" sizeXl="3" sizeLg="4" sizeMd="6" sizeSm="3">
+
+      <ion-card>
+        <img alt="Silhouette of mountains" style="height:25rem; width:30rem;" src={{data.cover}} />
+        <ion-card-header>
+          <ion-card-title>{{data.name}}</ion-card-title>
+          <ion-card-subtitle>{{data.price | currency}}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          {{data.description}}
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>

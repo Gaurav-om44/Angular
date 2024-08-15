@@ -1,0 +1,7 @@
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="!loading">
+  <div *ngFor="let item of items">
+    {{ item.name }} - {{ item.description }}
+  </div>
+</div>
+<div *ngIf="error">{{ error.message }}</div>

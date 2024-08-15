@@ -1,0 +1,13 @@
+<header>
+  <img
+    width="120"
+    src="https://www.decodedfrontend.io/wp-content/uploads/2021/01/logo-01-1.png"
+    alt="Decoded Frontend"
+  />
+  <button (click)="applyFilter()">Apply Filter</button>
+</header>
+<main>
+  <input type="file" (change)="loadImage($event)" value="Select File" />
+
+  <canvas #imagePreview></canvas>
+</main>

@@ -1,0 +1,21 @@
+<div class="container">
+
+    <p class="fs-2 text-center fw-bold">API Data</p>
+
+    <div *ngIf="apiData">
+        <ul *ngFor="let user of apiData">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{user.firstname + " "+ user.lastname}}</h5>
+                    <p class="card-text">{{user.email}}</p>
+                    <p class="card-text">{{user.birthDate}}</p>
+                </div>
+            </div>
+
+        </ul>
+    </div>
+    <div *ngIf="!apiData">
+        <p>Loading...</p>
+    </div>
+
+</div>

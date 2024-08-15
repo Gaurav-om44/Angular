@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" [(ngModel)]="formData.name" required minlength="2">
+  <div *ngIf="userForm.submitted && !userForm.controls.name?.valid">
+    <small *ngIf="userForm.controls.name?.errors?.required">Name is required.</small>
+    <small *ngIf="userForm.controls.name?.errors?.minlength">Name must be at least 2 characters long.</small>
+  </div>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" [(ngModel)]="formData.email" required>
+  <div *ngIf="userForm.submitted && !userForm.controls.email?.valid">
+    <small *ngIf="userForm.controls.email?.errors?.required">Email is required.</small>
+    <small *ngIf="userForm.controls.email?.errors?.email">Email must be valid.</small>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<p *ngIf="userForm.submitted">
+  Form Data: {{ formData | json }}
+</p>

@@ -1,0 +1,8 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="16px">
+  <mat-card>
+    <h1>{{ title }}</h1>
+    <div *ngFor="let task of tasks">
+      <app-ui-task [task]="task"></app-ui-task>
+    </div>
+  </mat-card>
+</div>

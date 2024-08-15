@@ -1,0 +1,9 @@
+<div *ngIf="stockData$ | async as stockData; else loading">
+    <div *ngFor="let stock of stockData">
+      {{ stock.name }}: {{ stock.price }}
+    </div>
+  </div>
+  <ng-template #loading>
+    Loading..
+  </ng-template>
+  

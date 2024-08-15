@@ -1,0 +1,10 @@
+.animated-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  

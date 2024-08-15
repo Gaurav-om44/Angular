@@ -1,0 +1,14 @@
+<!-- src/app/demo/demo.component.html -->
+<div>
+    <h2>HTTP Requests Demo</h2>
+    <button (click)="addPost()">Add Post</button>
+    <ul>
+      <li *ngFor="let post of posts">
+        {{ post.title }}
+        <button (click)="updatePost(post.id)">Update</button>
+        <button (click)="deletePost(post.id)">Delete</button>
+      </li>
+    </ul>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+  
